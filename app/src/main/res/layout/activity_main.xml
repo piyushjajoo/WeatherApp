@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pjajoo.weatherapp.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/myRel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/myImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/weather" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="112dp"
+            android:background="@android:color/background_light"
+            android:hint="ENTER CITY (HOUSTON, LONDON).."
+            android:singleLine="true"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:background="@android:color/background_light"
+            android:hint="ENTER COUNTRY CODE (US, UK).."
+            android:singleLine="true"
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/country"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/black"
+            android:onClick="getWeather"
+            android:padding="20dp"
+            android:text="What's the weather?"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/multiLineTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/weather"
+            android:layout_marginTop="66dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:padding="40dp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
